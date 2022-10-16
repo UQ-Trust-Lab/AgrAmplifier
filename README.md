@@ -1,6 +1,15 @@
 # AgrAmplifier
 
 ## Cite AgrAmplifier
+If you use AgrAmplifier for research, please cite the following paper:
+
+@article{shen2022better,
+  title={Better Together: Attaining the Triad of Byzantine-robust Federated Learning via Local Update Amplification},
+  author={Shen, Liyue and Zhang, Yanjun and Wang, Jingwei and Bai, Guangdong},
+  booktitle={Annual Computer Security Applications Conference (ACSAC ’22)},
+  year={2022},
+  publisher={ACM}
+}
 
 ## Code structure
 To run the experiments, please run *dataset*_script.py, replace *dataset* with the dataset to experiment with.
