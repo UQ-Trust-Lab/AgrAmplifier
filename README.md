@@ -1,5 +1,7 @@
 # AgrAmplifier
 
+## Cite AgrAmplifier
+
 ## Code structure
 To run the experiments, please run *dataset*_script.py, replace *dataset* with the dataset to experiment with.
 The code can execute directly without downloading dataset file. List of runnable script files
@@ -28,7 +30,7 @@ Other files in the repository
   * Fang [2] (Refer to Sec 4.3.2, line 626 of the original paper, also in APPENDIX Algorithm 3)
   * Trimmed-mean [3] (Refer to Sec 2.2, line 236 of the original paper)
   * CosDen, EuDen, and MgDen (Refer to Sec 4.3.1, line 610 of the original paper, also in APPENDIX Algorithm 2)
-* __FL_Models.py__ The models used for experiment, attacks are wrapped in this file, including 
+* __FL_Models.py__ The models used for experiment, attacks are wrapped in this file, including
   * S&H attack [4] (Refer to Sec 4.2.1, line 581 of the original paper)
   * Label flipping (Refer to Sec 4.2.1, line 565 of the original paper)
   * Gradient ascent (Refer to Sec 4.2.1, line 570 of the original paper)
@@ -36,7 +38,7 @@ Other files in the repository
   * Targeted attack [1] (Referenced as T-scal in Sec 4.2.2 of the original paper)
 
 ## Understanding the output
-The output consists of for columns 
+The output consists of for columns
 
 | epoch | test_acc | test_loss | training_acc | trainig_loss |
 |-------|----------|-----------|--------------|--------------|
@@ -70,7 +72,7 @@ att_experimented = ["mislead"]
 agr_experimented = [constants.baseline, constants.fang, constants.p_fang]
 ```
 Then run the script.
-Three csv files will be generated in directory __./output__ once script executed. One file with containing 'start_1000' in its filename is the baseline (note as file1). (There are overall 200 rounds but constants.baseline tell the script to start attack on round 1000). The rest two are those attacked and protected by corresponding AGR. 
+Three csv files will be generated in directory __./output__ once script executed. One file with containing 'start_1000' in its filename is the baseline (note as file1). (There are overall 200 rounds but constants.baseline tell the script to start attack on round 1000). The rest two are those attacked and protected by corresponding AGR.
 The file with 'def_fl_trust' in its filename (note as file2) corresponding to the AGR FLTrust [1] (Sec 4.3.3, line 654) while that with 'def_p-trust' corresponding to the AGR FLTrust_Amp+ (Sec 4.3.3, line 660).
 
 To acquire the final value, compute the evaluation metric according to Sec 4.4.1, equation (1). The attack starts at round 50 so the T0 = 50 and T1 = 200, and we record every 10 rounds. Make difference of the attacked test accuracy (file2) and the baseline test accuracy (file1) after round 50 (the data is only meaningful after attack happens).
