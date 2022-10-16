@@ -3,12 +3,12 @@
 ## Cite AgrAmplifier
 If you use AgrAmplifier for research, please cite the following paper:
 
-@article{shen2022better,
-  title={Better Together: Attaining the Triad of Byzantine-robust Federated Learning via Local Update Amplification},
-  author={Shen, Liyue and Zhang, Yanjun and Wang, Jingwei and Bai, Guangdong},
-  booktitle={Annual Computer Security Applications Conference (ACSAC ’22)},
-  year={2022},
-  publisher={ACM}
+@article{shen2022better,<br />
+  title={Better Together: Attaining the Triad of Byzantine-robust Federated Learning via Local Update Amplification},<br />
+  author={Shen, Liyue and Zhang, Yanjun and Wang, Jingwei and Bai, Guangdong},<br />
+  booktitle={Annual Computer Security Applications Conference (ACSAC ’22)},<br />
+  year={2022},<br />
+  publisher={ACM}<br />
 }
 
 ## Code structure
